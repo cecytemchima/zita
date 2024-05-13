@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: #d7d7a8;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    position: relative;
+    
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    color: #556b2f;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #556b2f;
+    display: flex;
+    font-weight: 600;
+}
+
+.menu .navbar ul li:hover{
+    color: #7e7674;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+
+.header-content{
+    position: relative;
+    text-align: center;
+    margin-top: 300px;
+}
+
+.header-content h1{
+    font-size: 70px;
+    color: #dfdde0;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.header-content p{
+    font-size: 18px;
+    padding: 0 200px;
+    color: #8b7e7b;
+    margin-bottom: 80px;
+}
+
+.img{
+    width: 100px;
+    padding: 450px;
+}
+
+@media(max-width:991px){
+    .menu{
+        padding: 30px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #303030;
+        display: none;
+        border-radius: 25px;
+    }
+
+    .logo{
+        display: flex;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header-content{
+        flex-direction: 30px;
+        padding: 30px;
+        margin-top: 150px;
+    }
+
+    .header-content h1{
+        font-size: 40px;
+    }
+
+    .header-content p{
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+}
